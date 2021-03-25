@@ -1,0 +1,49 @@
+.container {
+    padding: 3%;
+}
+
+.myCard {
+    margin: auto;
+    text-align: center;
+    width: 40%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.mat-form-field {
+    width: 80%;
+}
+
+.mat-card-actions {
+    margin-top: 2%;
+}
+
+.outputDiv {
+    padding-top: 2%;
+    margin: auto;
+}
+
+.btnDiv {
+    text-align: center;
+}
+
+.playlistDiv {
+    margin-top: 2%;
+}
+
+img {
+    border: 2px;
+    border-radius: 60%;
+    box-shadow: 2px 2px 20px gray;
+    width: 40%;
+    margin-top: 2%;
+}
+
+.completeDiv {
+    text-align: center;
+}
+
+mat-expansion-panel {
+    width: 45%;
+    margin: auto;
+}

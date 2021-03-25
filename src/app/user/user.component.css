@@ -1,0 +1,63 @@
+.container {
+    padding: 5%;
+}
+
+.myCard {
+    margin: auto;
+    text-align: center;
+    width: 40%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.mat-form-field {
+    width: 80%;
+}
+
+.mat-card-actions {
+    margin-top: 2%;
+}
+
+.userDisplay {
+    margin-top: 2%;
+}
+
+.userCard {
+    margin-top: 1%;
+    margin: auto;
+    width: 70%;
+    padding-bottom: 3%;
+    text-align: center;
+    padding-top: 7%;
+}
+
+img {
+    border: 1px;
+    border-radius: 60%;
+    box-shadow: 2px 2px 40px gray;
+    height: 80%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.temp {
+    display: flex;
+}
+
+.temp2 {
+    text-align: center;
+    width: 100%;
+    /* padding-top: 3%; */
+}
+
+h1 {
+    font-size: 80px;
+    margin-bottom: 0%;
+}
+
+p {
+    font-size: 20px;
+}
