@@ -1,0 +1,32 @@
+<div class="container">
+    <mat-card class="myCard">
+        <mat-card-content>
+            <mat-form-field appearance="legacy">
+                <mat-label>Playlist Id</mat-label>
+                <input type="text" matInput [(ngModel)]="pid" placeholder="Playlist Id" required>
+            </mat-form-field>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" *ngIf="pid" (click)="getTracks()">Submit</button>
+            </mat-card-actions>
+        </mat-card-content>
+    </mat-card>
+    <div class="output" *ngIf="items">
+        <div class="track" *ngFor="let item of items">
+            <div class="track1">
+                <img src="{{ item.track.album.images[1].url }}" alt="AlbumImg">
+            </div>
+            <div class="track2">
+                <h1>{{ item.track.name }}</h1>
+                <button mat-raised-button color="primary"><a href="{{ item.track.album.external_urls.spotify }}"
+                        target="_blank">Spotify Link</a></button>
+                <div class="audioDiv">
+                    <audio controls>
+                        <source src="{{ item.track.preview_url }}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <button mat-raised-button color="warn" (click)="deleteTracks(item.track.uri)">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -16,14 +16,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './api.service';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatExpansionModule } from '@angular/material/expansion';
-
+import { CreateplaylistComponent } from './createplaylist/createplaylist.component';
+import { UpdateplaylistComponent } from './updateplaylist/updateplaylist.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { DeletetracksComponent } from './deletetracks/deletetracks.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     SearchComponent,
-    PlaylistComponent
+    PlaylistComponent,
+    CreateplaylistComponent,
+    UpdateplaylistComponent,
+    DeletetracksComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatCardModule,
     HttpClientModule,
     MatRadioModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatCheckboxModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

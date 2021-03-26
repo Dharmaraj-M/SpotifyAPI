@@ -1,0 +1,30 @@
+<div class="container">
+    <mat-card class="myCard">
+        <mat-card-content>
+            <mat-form-field appearance="legacy">
+                <mat-label>User Name</mat-label>
+                <input type="text" matInput [(ngModel)]="uname" placeholder="User Name" readonly>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Playlist Name</mat-label>
+                <input type="text" matInput [(ngModel)]="pname" placeholder="Playlist Name" required>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Playlist Description</mat-label>
+                <input type="text" matInput [(ngModel)]="pdes" placeholder="Playlist Description" required>
+            </mat-form-field><br>
+            <mat-checkbox [(ngModel)]="visible">Public</mat-checkbox>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" *ngIf="pname && pdes && visible" (click)="createPlaylist()">Submit</button>
+            </mat-card-actions>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="playlist" *ngIf="items">
+        <mat-card-content>
+            <h1>{{ items.name }}</h1>
+            <p>{{ items.description }}</p>
+            <h3>Owner | {{ items.owner.display_name }}</h3>
+            <h5>PlayList Id | {{ items.id }}</h5>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -13,7 +13,7 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  uname: string;
+  uname: string = 'oudsioqt7rkqdkco3lny5fosm';
   userData: string[] = [];
   
   getUserInfo() {

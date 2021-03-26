@@ -13,18 +13,12 @@ export class PlaylistComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  uname: string = "0amm0p1avu1z01ycxa44driwg";
+  uname: string = 'oudsioqt7rkqdkco3lny5fosm';
   items: any[] = [];
-
+  
   getPlaylist() {
     this.apiService.getPlaylist(this.uname).subscribe(arg => {
       this.items = arg.items;
-      // console.log(arg);
-      // console.log(arg.items[0].id);
-      // console.log(arg.items[0].name);
-      // console.log(arg.items[0].description);
-      // console.log(arg.items[0].owner.display_name);
-      // console.log(arg.items[0].images[0].url);
     });
   }
 }

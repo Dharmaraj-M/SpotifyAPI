@@ -20,11 +20,13 @@ export class SearchComponent implements OnInit {
 
   search() {
     if (this.type == "track") {
+      this.items1 = [];
       this.apiService.search(this.query, this.type).subscribe((res) => {
         this.items = res.tracks.items;
       });
     }
     if(this.type == "artist") {
+      this.items = [];
       this.apiService.search(this.query, this.type).subscribe((res) => {
         this.items1 = res.artists.items;
       });
